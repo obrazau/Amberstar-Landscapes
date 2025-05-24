@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: obrazau/Amberstar-Landscapes
+  name: git-gateway
   branch: main
 
 media_folder: "images/uploads"
@@ -10,9 +9,10 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - label: "Home Page"
+      - file: "index.html"
+        label: "Home"
         name: "home"
-        file: "index.html"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Main Content", name: "body", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
